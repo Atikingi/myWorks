@@ -56,7 +56,7 @@
   border-color: none;
   border: 0;
   background-color: #845ec2;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   -webkit-box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%);
   box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%);
   outline: none;
@@ -80,7 +80,7 @@
 
   outline: none;
   border: 0;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   background-color: #845ec2;
 }
 
@@ -107,7 +107,7 @@
 
   border: 0;
   border-radius: 50px;
-  background: #00c9b7;
+  background: #00BF98;
   -webkit-box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%);
   box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%);
 
