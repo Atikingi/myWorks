@@ -7,7 +7,7 @@ const passwordOutput = document.getElementsByClassName("passwordOutput")[0];
 function genPass() {
     const arrPasswordSymbols = [];
     const passwordSymbols =
-      "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+      "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789";
   
     if (lengthPass.value === "" || lengthPass.value < 8 || lengthPass.value > 50 || !isFinite(lengthPass.value )) {
       alert("Длина пароля должна быть не менее 8 и не более 50 символов");
