@@ -1,3 +1,4 @@
+const copyPassword = document.getElementsByClassName("box-buttons__button")[0];
 const generatePassword = document.getElementsByClassName("box-buttons__button")[1];
 const generatePasswordOffice = document.getElementsByClassName("box-buttons__button")[2];
 const lengthPass = document.getElementsByClassName("passwordLength")[0];
@@ -28,5 +29,9 @@ generatePassword.onclick = genPass;
 generatePasswordOffice.onclick = function() {
   lengthPass.value = 9;
   genPass();
+  navigator.clipboard.writeText(passwordOutput.value);
+}
+
+copyPassword.onclick = function() {
   navigator.clipboard.writeText(passwordOutput.value);
 }
