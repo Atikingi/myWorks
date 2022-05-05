@@ -135,6 +135,32 @@
     box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
 }
 
+.content__popup {
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+}
+
+.popup-box {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 11px;
+    margin: 49vh auto;
+    max-width: 200px;
+    border-radius: 12px;
+    font-size: 24px;
+    color: #ffffff;
+    background: #00BF98;
+}
+
+.hide {
+    display: none;
+}
+
 @media (max-width:374px) {
     .box-buttons__button {
         width: 150px;
