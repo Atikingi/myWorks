@@ -5,6 +5,10 @@ const generatePasswordSAP = document.querySelector(".box-buttons__button-sap");
 const lengthPass = document.querySelector(".passwordLength");
 const passwordOutput = document.querySelector(".passwordOutput");
 const copyStatus = document.querySelector('.content__popup');
+const help = document.querySelector('.question-icon');
+const howUseIcon = document.querySelector('.how-use-icon')
+const helpContentBox = document.querySelector('.box-title');
+const howUse = document.querySelector('.box-how-use');
 
 function genPass() {
     const arrPasswordSymbols = [];
@@ -131,6 +135,29 @@ function genLogin() {
 
     return passwordOutput.value = finalName.join('').toUpperCase();
 }
+
+function showHelpMessage() {
+    const helpBox = document.createElement('div');
+    helpBox.classList.add('help-box');
+    helpContentBox.appendChild(helpBox);
+    helpBox.innerHTML = 'Введите ФИО сотрудника на <br> русской раскладке и нажмите кнопку FOR SAP';
+    help.onmouseout = function() {
+        helpBox.remove();
+    }
+}
+
+function showHowUse() {
+    const helpBox = document.createElement('div');
+    helpBox.classList.add('help-how-use');
+    howUse.appendChild(helpBox);
+    helpBox.innerHTML = 'Функционал кнопок: <br> <b><u>GENERATE</u></b> - введите длину пароля в поле Password length, чтобы сгенерировать пароль<br><b><u>COPY</u></b> - копирует результат в буфер обмена<br><b><u>FOR OFFICE</u></b> - генерирует пароль из 9 символов с символом <q>!</q> в конце и автоматически копирует в ваш буфер обмена<br><b><u>FOR SAP</u></b> - введите ФИО на русском в поле Username for SAP, чтобы сгенерировать логин для SAP на латиннице (результат - фамилия + первая буква имени + первая буква отчества), сразу копирует результат в ваш буфер обмена';
+    howUseIcon.onmouseout = function() {
+        helpBox.remove();
+    }
+}
+
+help.addEventListener('mouseover', showHelpMessage);
+howUseIcon.addEventListener('mouseover', showHowUse);
 
 
 const showCopyPopup = () => {
