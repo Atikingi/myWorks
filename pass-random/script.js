@@ -157,4 +157,5 @@ generatePasswordSAP.onclick = function() {
         navigator.clipboard.writeText(passwordOutput.value);
         showCopyPopup();
     }
+
 };
