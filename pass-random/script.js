@@ -4,6 +4,7 @@ const generatePasswordOffice = document.querySelector(".box-buttons__button-offi
 const generatePasswordSAP = document.querySelector(".box-buttons__button-sap");
 const lengthPass = document.querySelector(".passwordLength");
 const passwordOutput = document.querySelector(".passwordOutput");
+const copyStatus = document.querySelector('.content__popup');
 
 function genPass() {
     const arrPasswordSymbols = [];
@@ -110,7 +111,7 @@ function genLogin() {
     }
 
     if (userArr.length > 3) {
-        alert('ФИО должно содержать 3 слова')
+        return alert('ФИО должно содержать 3 слова')
     }
 
     userArr = userArr.join('').toUpperCase();
@@ -132,19 +133,28 @@ function genLogin() {
 }
 
 
+const showCopyPopup = () => {
+    copyStatus.classList.remove('hide');
+    setTimeout(() => copyStatus.classList.add('hide'), 1500)
+};
+
 generatePassword.onclick = genPass;
 
 generatePasswordOffice.onclick = function() {
     lengthPass.value = 9;
     genPass();
     navigator.clipboard.writeText(passwordOutput.value);
+    showCopyPopup();
 };
 
 copyPassword.onclick = function() {
     navigator.clipboard.writeText(passwordOutput.value);
+    showCopyPopup();
 };
 
 generatePasswordSAP.onclick = function() {
-    genLogin();
-    navigator.clipboard.writeText(passwordOutput.value);
+    if (genLogin()) {
+        navigator.clipboard.writeText(passwordOutput.value);
+        showCopyPopup();
+    }
 };
