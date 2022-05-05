@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .content {
@@ -14,7 +15,7 @@
 }
 
 .content__title {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     color: #ffffff;
     font-weight: 900;
     font-size: 42px;
@@ -68,11 +69,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 380px;
 }
 
 .passwordLength {
-    width: 18px;
-    padding: 4px 10px;
+    width: 33px;
+    padding: 4px 4px;
     text-align: center;
     font-size: 16px;
     font-weight: bold;
@@ -83,11 +85,56 @@
     background-color: #845ec2;
 }
 
+.box-title,
+.box-how-use {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.question-icon,
+.how-use-icon {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.help-box {
+    width: 250px;
+    height: 100px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 100%;
+    left: 100%;
+    padding: 10px;
+    color: #ffffff;
+    line-height: 25px;
+    background-color: #00BF98;
+    border-radius: 8px;
+    border: 2px solid #845ec2;
+}
+
+.help-how-use {
+    width: 300px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 9;
+    top: 10px;
+    left: 330px;
+    padding: 10px;
+    color: #ffffff;
+    line-height: 25px;
+    background-color: #00BF98;
+    border-radius: 8px;
+    border: 2px solid #845ec2;
+}
+
 .input__username {
     margin-top: 8px;
-    width: 300px;
+    width: 90%;
     padding: 4px 10px;
-    margin-left: 15px;
     text-align: center;
     font-size: 16px;
     font-weight: bold;
@@ -106,6 +153,13 @@
     font-size: 16px;
     text-align: center;
     line-height: 1.2;
+}
+
+.box-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 .box-buttons__button-copy,
@@ -131,7 +185,10 @@
     text-transform: uppercase;
 }
 
-.box-buttons__button:hover {
+.box-buttons__button-copy:hover,
+.box-buttons__button-generate:hover,
+.box-buttons__button-office:hover,
+.box-buttons__button-sap:hover {
     box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
 }
 
@@ -145,6 +202,7 @@
 }
 
 .popup-box {
+    min-width: 230px;
     display: flex;
     gap: 20px;
     align-items: center;
@@ -163,9 +221,27 @@
 
 @media (max-width:374px) {
     .box-buttons__button {
-        width: 150px;
+        width: 130px;
     }
     .passwordOutput {
         width: 90%;
+    }
+    .box__username {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 310px;
+    }
+    .help-how-use,
+    .help-box {
+        width: 280px;
+    }
+}
+
+@media (max-width:802px) {
+    .help-how-use,
+    .help-box {
+        top: 20px;
+        left: auto;
     }
 }
