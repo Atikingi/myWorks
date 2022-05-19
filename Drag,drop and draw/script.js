@@ -48,12 +48,39 @@ draggableElement.forEach((element) => {
     });
 });
 
+// Draw
+
 const paintBox = document.querySelector('.paint');
-paintBox.width = container.offsetWidth - 23;
-paintBox.height = container.offsetHeight - 23;
 const context = paintBox.getContext('2d');
+const drawColor = document.querySelectorAll('.color');
+const drawWidth = document.querySelectorAll('.width');
+const clearButton = document.querySelector('.clear-button');
+
+paintBox.width = container.offsetWidth - 223;
+paintBox.height = container.offsetHeight - 23;
+
+
 let isDrawing;
 
+const changeColor = (color) => {
+    context.strokeStyle = color;
+}
+
+const changeWidth = (width) => {
+    context.lineWidth = width;
+}
+
+drawColor.forEach((elem) => {
+    elem.onclick = function() {
+        changeColor(getComputedStyle(elem).backgroundColor);
+    }
+})
+
+drawWidth.forEach((elem) => {
+    elem.onclick = function() {
+        changeWidth(parseInt(getComputedStyle(elem).width));
+    }
+})
 
 const startPaint = (event) => {
     isDrawing = true;
@@ -67,15 +94,14 @@ const painting = (event) => {
         let x = event.pageX - paintBox.offsetLeft;
         let y = event.pageY - paintBox.offsetTop;
 
-        context.strokeStyle = 'red';
-        context.lineWidth = 2;
-        console.log(context.lineTo(x, y))
+        context.lineJoin = 'round';
+        context.lineCap = 'round';
         context.lineTo(x, y);
         context.stroke();
     }
 }
 
-const stopPaint = (event) => {
+const stopPaint = () => {
     isDrawing = false;
 }
 
@@ -83,3 +109,6 @@ paintBox.addEventListener('mousedown', startPaint);
 paintBox.addEventListener('mousemove', painting);
 paintBox.addEventListener('mouseover', stopPaint);
 paintBox.addEventListener('mouseup', stopPaint);
+clearButton.addEventListener('click', function() {
+    context.clearRect(0, 0, paintBox.width, paintBox.height);
+})
