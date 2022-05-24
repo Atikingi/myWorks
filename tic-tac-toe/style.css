@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.cont {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cont__disabled {
+    pointer-events: none;
+}
+
+.sq {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: blanchedalmond;
+    cursor: pointer;
+}
+
+.sq__enabled {
+    pointer-events: all;
+}
+
+.cross-win,
+.circle-win {
+    text-align: center;
+    font-size: 24px;
+    color: aqua;
+}
+
+.draw {
+    text-align: center;
+    font-size: 24px;
+    color: aqua;
+}
+
+.cross-win__hidden {
+    visibility: hidden;
+}
+
+.circle-win__hidden {
+    visibility: hidden;
+}
+
+.draw__hidden {
+    visibility: hidden;
+}
+
+.cross::after,
+.cross::before {
+    content: '';
+    cursor: pointer;
+    position: absolute;
+    top: 24px;
+    left: -10px;
+    width: 68px;
+    height: 2px;
+    background-color: black;
+    color: black;
+}
+
+.cross::after {
+    transform: rotate(45deg);
+}
+
+.cross::before {
+    transform: rotate(-45deg);
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid black;
+}
+
+.score__cross,
+.score__circle {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.cross__value,
+.circle__value,
+.draw__value {
+    font-size: 18px;
+    color: white;
+}
