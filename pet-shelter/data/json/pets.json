@@ -1,0 +1,86 @@
+[
+  {
+    "id": "1",
+    "name": "Jennifer",
+    "img_url": "../data/img/pets/pets-jennifer.png",
+    "family": "Dog",
+    "breed": "Labrador",
+    "description": "Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but wont hesitate to play up a storm in the house if she has all of her favorite toys.",
+    "age": "2 months",
+    "inoculations": "none",
+    "diseases": "none",
+    "parasites": "none"
+  },
+  {
+    "id": "2",
+    "name": "Katrine",
+    "img_url": "../data/img/pets/pets-katrine.png",
+    "family": "Cat",
+    "breed": "British",
+    "description": "Katrine ipsum, dolor sit amet consectetur adipisicing elit. Pariatur fuga vitae non inventore quas, quo, corporis delectus quibusdam amet, quia ullam quae exercitationem itaque dolorem.",
+    "age": "5 months",
+    "inoculations": "none",
+    "diseases": "yes",
+    "parasites": "none"
+  },
+  {
+    "id": "3",
+    "name": "Woody",
+    "img_url": "../data/img/pets/pets-woody.png",
+    "family": "Dog",
+    "breed": "British",
+    "description": "Woody ipsum, dolor sit amet consectetur adipisicing elit. Pariatur fuga vitae non inventore quas, quo, corporis delectus quibusdam amet, quia ullam quae exercitationem itaque dolorem.",
+    "age": "5 months",
+    "inoculations": "none",
+    "diseases": "yes",
+    "parasites": "none"
+  },
+  {
+    "id": "4",
+    "name": "Altron",
+    "img_url": "../data/img/pets/altron.png",
+    "family": "Cat",
+    "breed": "British",
+    "description": "Altron ipsum, dolor sit amet consectetur adipisicing elit. Pariatur fuga vitae non inventore quas, quo, corporis delectus quibusdam amet, quia ullam quae exercitationem itaque dolorem.",
+    "age": "5 months",
+    "inoculations": "none",
+    "diseases": "yes",
+    "parasites": "none"
+  },
+  {
+    "id": "5",
+    "name": "Dante",
+    "img_url": "../data/img/pets/dante.png",
+    "family": "Dog",
+    "breed": "British",
+    "description": "Dante ipsum, dolor sit amet consectetur adipisicing elit. Pariatur fuga vitae non inventore quas, quo, corporis delectus quibusdam amet, quia ullam quae exercitationem itaque dolorem.",
+    "age": "5 months",
+    "inoculations": "none",
+    "diseases": "yes",
+    "parasites": "none"
+  },
+  {
+    "id": "6",
+    "name": "Colin",
+    "img_url": "../data/img/pets/colin.png",
+    "family": "Cat",
+    "breed": "British",
+    "description": "Colin ipsum, dolor sit amet consectetur adipisicing elit. Pariatur fuga vitae non inventore quas, quo, corporis delectus quibusdam amet, quia ullam quae exercitationem itaque dolorem.",
+    "age": "5 months",
+    "inoculations": "none",
+    "diseases": "yes",
+    "parasites": "none"
+  },
+  {
+    "id": "7",
+    "name": "Bobby",
+    "img_url": "../data/img/pets/bobby.png",
+    "family": "Cat",
+    "breed": "British",
+    "description": "Bobby ipsum, dolor sit amet consectetur adipisicing elit. Pariatur fuga vitae non inventore quas, quo, corporis delectus quibusdam amet, quia ullam quae exercitationem itaque dolorem.",
+    "age": "5 months",
+    "inoculations": "none",
+    "diseases": "yes",
+    "parasites": "none"
+  }
+]

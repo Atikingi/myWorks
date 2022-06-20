@@ -1,0 +1,129 @@
+@mixin headers {
+  font-family: $ff-georgia;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin logo-title {
+  @include headers;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: $color-primary;
+}
+
+@mixin logo-subtitle {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  color: $color-light-xl;
+}
+
+@mixin font-h2 {
+  @include headers;
+  font-size: 44px;
+  line-height: 130%;
+}
+
+@mixin font-h3 {
+  @include headers;
+  font-size: 35px;
+  letter-spacing: 0.06em;
+  line-height: 130%;
+}
+
+@mixin font-h3-mobile {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+@mixin font-h4 {
+  @include headers;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+
+@mixin font-h5 {
+  @include headers;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+
+@mixin paragraph-l {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+}
+
+@mixin paragraph-s {
+  font-family: 'Arial';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+}
+
+@mixin paragraph-mobile-menu {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 160%;
+}
+
+@mixin button-primary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 207px;
+  height: 52px;
+
+  border-radius: 100px;
+  border: 0;
+}
+
+@mixin button-secondary {
+  @include button-primary;
+  width: 187px;
+}
+
+@mixin circles-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+
+  border: 2px solid $color-primary;
+  border-radius: 100px;
+}
+
+@mixin pets-card {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  border-radius: 9px;
+}
+
+@mixin donation-description {
+  font-family: 'Arial';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
