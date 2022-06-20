@@ -835,7 +835,7 @@ html {
 .modal-pet {
   position: absolute;
   z-index: 90;
-  min-width: 600px;
+  min-width: 400px;
   max-width: 900px;
   margin: 0 auto;
   display: flex;
@@ -846,20 +846,21 @@ html {
 @media (max-width: 768px) {
   .modal-pet {
     min-width: 270px;
-    max-width: 682px;
+    max-width: 550px;
   }
 }
 @media (max-width: 500px) {
   .modal-pet {
     width: 100%;
-    margin-top: 9px;
-    margin-left: 40px;
+    margin-right: 9px;
+    margin-left: 9px;
     margin-top: 80px;
     padding-left: 5px;
   }
 }
 .modal-pet__wrapper {
-  max-width: 952px;
+  position: relative;
+  width: 100%;
   display: flex;
   align-items: center;
   padding-left: 15px;
@@ -874,15 +875,13 @@ html {
     justify-content: center;
   }
 }
-@media (max-width: 500px) {
-  .modal-pet__wrapper {
-    margin-right: 31;
-  }
-}
 .modal-pet__close-button {
   width: 52px;
   height: 52px;
   margin-left: auto;
+  position: absolute;
+  right: 0;
+  z-index: 25;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
   background: transparent;
