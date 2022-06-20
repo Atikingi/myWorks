@@ -61,7 +61,7 @@ class PetModal {
 
 PetModal.template = {
   tag: 'div',
-  cls: ['modal-pet', 'center'],
+  cls: 'modal-pet',
   content: [
     {
       tag: 'button',
