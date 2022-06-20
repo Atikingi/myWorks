@@ -1,1 +1,0 @@
-## [Password-randomizer](https://Atikingi.github.io/myWorks/pass-random/)
